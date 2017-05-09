@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BakingAppNanoDegree</string>
+
+
+    <string name="loading">Loading</string>
+    <string name="wait_moment">wait a moment</string>
+    <string name="request_timeout">time out</string>
+
+</resources>

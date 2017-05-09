@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <!--drawer-->
+    <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawerLayoutMainDialer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--fragments container-->
+            <LinearLayout
+                android:id="@+id/simple_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_below="@+id/virtual_app_bar"
+                android:background="@android:color/transparent"
+                android:orientation="vertical" />
+
+
+            <!--area for header-->
+            <!--to make the page come behind the app bar set this view HIDDEN  -->
+            <!--to make the page come below the app bar set this view VISIBLE  -->
+            <LinearLayout
+                android:id="@+id/virtual_app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal"></LinearLayout>
+
+            <!-- tool bar-->
+            <include
+                android:id="@+id/app_bar"
+                layout="@layout/app_bar"
+                android:layout_width="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_height="80dp" />
+
+
+            <!--bottom tabs bar-->
+            <!--<include-->
+            <!--android:id="@+id/tabs_bar"-->
+            <!--layout="@layout/tabs_bar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/tabs_bar_height"-->
+            <!--/>-->
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/fragment_navigation_drawer"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start" />
+
+
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>
